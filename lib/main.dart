@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:whattsap_ui/pages/home/home_page.dart';
 import 'package:whattsap_ui/pages/login/login_page.dart';
-import 'package:whattsap_ui/pages/splash/splash_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -21,9 +22,10 @@ class MyApp extends StatelessWidget {
           useMaterial3: false
       ),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home:   HomePage(),
        routes: {
         '/loginpage' : (context) => LoginPage(),
+        '/homepage' : (context) => HomePage(),
       },
     );
     

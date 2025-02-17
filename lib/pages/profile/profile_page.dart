@@ -158,7 +158,9 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
       ),
       floatingActionButton: UiHelper.customButton(
-        callback: (){}, 
+        callback: (){
+          Navigator.pushNamed(context, '/homepage');
+        }, 
         buttonname: 'Suivant'),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat ,
     );
