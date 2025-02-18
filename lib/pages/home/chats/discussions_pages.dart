@@ -15,143 +15,37 @@ class DiscussionsPages extends StatelessWidget {
     },
 
     {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
+      "images" : "assets/images/jo.jpg",
+      "name" : "Jonathan",
+      "lstMsg" : "Coucou 👋",
       "time" : "12h30",
       "nbrMsg" : "1"
     },
 
     {
       "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
+      "name" : "Baby Boo",
+      "lstMsg" : "Quelles sont les nouuvelles ?",
       "time" : "18h00",
       "nbrMsg" : "7"
+    },
+
+    {
+      "images" : "assets/images/kev.jpg",
+      "name" : "Kevin",
+      "lstMsg" : "Morale ?",
+      "time" : "Hier",
+      "nbrMsg" : "2"
+    },
+
+    {
+      "images" : "assets/images/jho.jpg",
+      "name" : "Fortune",
+      "lstMsg" : "Aventirier",
+      "time" : "08h20",
+      "nbrMsg" : "1"
     },
     
-    {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
-    
-    {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
-    
-    {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
-      {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
-      {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
-      {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
-      {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
-      {
-      "images" : "assets/images/image_12.webp",
-      "name" : "Bob",
-      "lstMsg" : "Coucou",
-      "time" : "12h30",
-      "nbrMsg" : "1"
-    },
-
-    {
-      "images" : "assets/images/image_13.jpeg",
-      "name" : "Fortune",
-      "lstMsg" : "Quelles sont les nouuvelles",
-      "time" : "18h00",
-      "nbrMsg" : "7"
-    },
   ];
 
   @override
@@ -186,6 +80,7 @@ class DiscussionsPages extends StatelessWidget {
                           color: Color(0XFF00A884),
                           fontweight: FontWeight.bold
                         ),
+                        
                       CircleAvatar(
                         radius: 12,
                         backgroundColor: Color(0XFF00A884),
@@ -204,11 +99,15 @@ class DiscussionsPages extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: CircleAvatar(
-        backgroundColor: Color(0XFF00A884),
-        radius: 30,
-        child: Image.asset('assets/images/msg_icon.png'),
-        
+      floatingActionButton: GestureDetector(
+        onTap: (){
+          Navigator.pushNamed(context, '/contacts');
+        },
+        child: CircleAvatar(
+          backgroundColor: Color(0XFF00A884),
+          radius: 30,
+          child: Image.asset('assets/images/msg_icon.png'),
+        ),
       ),
       
     );

@@ -23,8 +23,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
             UiHelper.customText(
                 text: 'Bienvenue sur WhatsApp',
                 height: 27,
+                
                 fontweight: FontWeight.normal,
-                color: Colors.black),
+                color: Colors.black,
+              ),
             SizedBox(
               height: 25,
             ),

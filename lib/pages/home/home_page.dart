@@ -30,14 +30,16 @@ class _HomePageState extends State<HomePage> {
           toolbarHeight: 100,
           title: UiHelper.customText(text: 'WhatsApp', height: 20, color: Colors.white),
           actions: [
-            Padding(
-              padding: const EdgeInsets.only(right: 20),
-              child: IconButton(
+            IconButton(
+              onPressed: () {
+              },
+              icon: Image.asset('assets/images/Search.png', width: 20, height: 20),
+            ),
+            IconButton(
                 onPressed: () {
                 },
-                icon: Image.asset('assets/images/Search.png', width: 20, height: 20),
+                icon: Icon(Icons.more_vert),
               ),
-            )
           ],
         ),
         body:TabBarView(
